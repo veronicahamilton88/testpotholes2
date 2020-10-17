@@ -1,0 +1,23 @@
+open git bash in the repo, origin main
+  conda create -n potholes_env python=3.6
+  conda activate potholes_env -OR- source activate potholes_env
+  pip install flask
+  pip install plotly==4.11.0
+  pip install sqlalchemy
+  pip install -U flask-cors
+  pip install gunicorn
+navigate into static folder to test run:
+  python app.py
+re-open git bash new
+  pip freeze > requirements.txt
+Create a new file in VS Code and name it Procfile (without any extension)
+  **Put it in the main folder, not any sub-folders.**
+  add code to Procfile:
+  web: gunicorn app:app
+Go to Heroku and log in
+Click new, Create New App, name and create your app
+Click GitHub connect button and log in
+Search for repository to add 
+	**** MUST BE IN YOUR OWN GITHUB ACCOUNT, so if you want to deply 	this on your own, you'll have to copy all our files into a new 	directory on your own GitHub account (if you are not Mary)
+Enable automatic deploys
+Deploy main branch, give a few mins for it to set up everything. 
